@@ -21,8 +21,8 @@ class _SignINPageState extends State<SignINPage> {
                 flex: 6,
                 child: Column(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 20),
+                    const Padding(
+                      padding: EdgeInsets.only(bottom: 20),
                       child: Text('Welcome Back',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -30,8 +30,8 @@ class _SignINPageState extends State<SignINPage> {
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(16.0),
+                    const Padding(
+                      padding: EdgeInsets.all(16.0),
                       child: TextField(
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
@@ -39,8 +39,8 @@ class _SignINPageState extends State<SignINPage> {
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(16.0),
+                    const Padding(
+                      padding: EdgeInsets.all(16.0),
                       child: TextField(
                         obscureText: true,
                         decoration: InputDecoration(
@@ -49,21 +49,38 @@ class _SignINPageState extends State<SignINPage> {
                         ),
                       ),
                     ),
+                   Padding(
+                     padding: const EdgeInsets.all(16.0),
+                     child: MaterialButton(onPressed: (){},
+                         minWidth: double.infinity,
+                         child: const Text('Sign in',
+                           style: TextStyle(
+                               color: Colors.white
+                               ),
+                         ),
+                         color: Colors.black),
+                   ),
                    Row(
                      crossAxisAlignment: CrossAxisAlignment.start,
                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                      children: [
-                       TextButton(onPressed: () {}, child: Text('Register',
-                         style: TextStyle(
-                            color: Colors.black, fontWeight: FontWeight.bold,
-                            ),
-                         )
-                       ),
-                       TextButton(onPressed: () {}, child: Text('Forget Password',
-                         style: TextStyle(
-                           color: Colors.black, fontWeight: FontWeight.bold,
+                       Padding(
+                         padding: const EdgeInsets.only(left: 16),
+                         child: TextButton(onPressed: () {}, child: const Text('Register',
+                           style: TextStyle(
+                              color: Colors.black, fontWeight: FontWeight.bold,
+                              ),
+                           )
                          ),
-                        ),
+                       ),
+                       Padding(
+                         padding: const EdgeInsets.only(right: 16),
+                         child: TextButton(onPressed: () {}, child: const Text('Forget Password?',
+                           style: TextStyle(
+                             color: Colors.black, fontWeight: FontWeight.bold,
+                           ),
+                          ),
+                         ),
                        ),
                      ],
                    )
